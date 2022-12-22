@@ -1,0 +1,383 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Gothic:wght@400;700;800&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400&display=swap');
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* font-family: 'Gowun Batang', serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Roboto Flex', sans-serif; */
+body {font-family: 'Nanum Gothic', sans-serif; font-weight: 500;}
+
+/* layout */
+.wrap {width: 100%; overflow: hidden; position: relative;}
+header {width: 100%; height: 80px; position: fixed; background: #fff; z-index: 100;}
+.innerHeader {width: 100%; line-height: 80px;}
+.innerHeader .logo {float: left; margin-left: 150px;}
+.innerHeader .gnb {float: left;}
+.innerHeader .gnb li {float: left; margin-left: 100px; font-size: 17px; color: rgb(80, 80, 80);font-weight: bold; letter-spacing: 0.5px;}
+
+
+
+
+
+
+
+.innerHeader .tnb {float: right; color: rgb(80, 80, 80); font-size: 14px; font-weight: bold;}
+.innerHeader .tnb > li {float: left; padding-left: 30px; text-align: center;}
+.innerHeader .tnb .inner {background: #fff; opacity: 0; transition: all 0.4s;}
+.innerHeader .tnb .inner.on {opacity: 1;}
+.innerHeader .tnb > a {width: 100%; height: 100%;}
+.innerHeader .tnb .inner li {width: 100px;}
+.innerHeader .tnb .inner a {width: 100%; height: 100%; display: block;}
+.innerHeader .gnbMo {display: none;}
+/* hover */
+.innerHeader .gnb li:hover, .innerHeader .gnb li:focus {color: rgb(123, 182, 151);}
+.innerHeader .tnb .inner a:hover, .innerHeader .tnb .inner a:focus {color: rgb(123, 182, 151);}
+.innerHeader .tnb > li > a:hover, .innerHeader .tnb > li > a:focus {color: rgb(123, 182, 151);}
+
+/* visual */
+.visual {width: 100%; height: 100%; position: fixed; z-index: -100;}
+.visual .titleImg {width: 1920px;}
+.visual .titleImg img {width: 100%;}
+.visual .titleBox {width: 80%; margin: 0 auto; padding-top: 400px; text-align: center; color: #fff; position: absolute; top: 32%; left: 50%; transform: translate(-50%,-50%);} 
+.visual .titleBox h2 {font-family: 'Roboto Flex', sans-serif; font-size: 52px; font-weight: 400; letter-spacing: 15px; margin-bottom: 60px;}
+.visual .titleBox p {line-height: 1.6; letter-spacing: 1px; font-family: 'Gowun Batang', serif;}
+
+/* circle */
+.circle {width: 100%; height: 1000px; background: #fff; position: relative; margin-top: 1500px;}
+.circle .circleTop {width: 132%; height: 70%; background: #fff; border-radius: 50%; margin: 0 auto; position: absolute; top: -15%; right: -16%;}
+.circle .center {width: 80%; position: relative; margin: 0 auto;}
+.circle .center li {width: 100%; margin-top: 100px; text-align: center;}
+.circle .center li:nth-child(2) .tit {color: blue;}
+.circle .center li img {width: 80%; border-radius: 50%; margin: 70px auto;}
+.circle .center .tit { font-size: 32px; font-family: 'Gowun Batang', serif; font-weight: bold;}
+.circle .center span {font-size: 18px;}
+.circle .center .txt {line-height: 1.8;}
+
+
+/* slick */
+.slick-prev {border: none; font-size: 30px; background: none; position: absolute; right: 66%; bottom: 38%; padding: 10px 18px; border-radius: 50%; background: #eee; color: #fff;}
+.slick-next {border: none; font-size: 30px; background: none; position: absolute; left: 66%; bottom: 38%; padding: 10px 18px; border-radius: 50%; background: #eee; color: #fff;}
+.slick-slide {
+    margin: 0 30px; // space(여백)/2
+}
+.slick-list {
+    margin: -30px -30px; // space(여백)/-2
+}
+
+/* teaTop */
+.teaTop {width: 100%; background: #fff; overflow: hidden; padding-top: 200px; padding-bottom: 300px;}
+.teaTop .inner {width: 70%; height: 100%; margin: 0 auto;}
+.teaTop .inner .txtBox {float: left; color: rgb(103, 112, 104); width: 50%;}
+.teaTop .inner .txtBox h3 {font-size: 42px; font-family: 'Gowun Batang', serif; margin-bottom: 40px;}
+.teaTop .inner .txtBox p {font-size: 17px; line-height: 1.6; margin-bottom: 25px;}
+.teaTop .inner .txtBox a {width: 100%; height: 100%; border-bottom: 1px solid  rgb(103, 112, 104); padding-bottom: 5px;}
+.teaTop .inner .imgBox {width: 45%; float: right; overflow: hidden;}
+.teaTop .inner .imgBox img {width: 100%;}
+
+/* teaBottom */
+.teaBottom {width: 100%;}
+.teaBottom .inner {width: 100%;}
+.teaBottom .inner .main {width: 100%; }
+.teaBottom .inner .main > li {width: 100%; height: 900px; background: url(../img/tea_field_item_1.png) no-repeat center/cover; color: white; padding-left: 350px; padding-top: 100px; position: relative;}
+.teaBottom .inner .main > li:nth-child(2) {background: url(../img/tea_field_item_2.png);}
+.teaBottom .inner .main > li:nth-child(3) {background: url(../img/tea_field_item_3.png);}
+.teaBottom .inner .main li h2 {font-size: 35px; font-family: 'Gowun Batang', serif; margin-bottom: 70px;}
+.teaBottom .inner .main li .txt {font-size: 17px; line-height: 1.6; margin-bottom: 40px;}
+.teaBottom .inner .main li a {border-bottom: 1px solid; padding-bottom: 5px;}
+.teaBottom .inner .main li .icon {width: 50%; position: absolute; top: 80px; right: 50px; scale: 0.5;}
+.teaBottom .inner .main li .icon img {margin-right: 10px;}
+.teaBottom .inner .main li .adress {position: absolute; bottom: 130px; left: 800px;}
+.teaBottom .inner .main li .adress::before {content: '\f041'; font-family: fontAwesome; margin-right: 10px;}
+
+/* special */
+.special {width: 100%; overflow: hidden; background: #fff;}
+.special .inner {width: 70%; margin: 150px auto;}
+.special .inner .txtBox {text-align: center; color: rgb(89, 99, 94);}
+.special .inner .txtBox h3 {font-size: 35px; font-family: 'Gowun Batang', serif; margin-bottom: 30px;}
+.special .inner .txtBox p {line-height: 1.6; margin-bottom: 100px;}
+.special .inner ul {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.special .inner ul li {width: 49%; height: 550px; margin-bottom: 30px; color: #fff;}
+.special .inner ul li .left {width: 50%; height: 100%; float: left; background: red;}
+.special .inner ul li .left h2 {font-size: 30px; font-weight: lighter; font-family: 'Gowun Batang', serif; margin: 40px 40px 20px;}
+.special .inner ul li .left a {display: block; text-align: center; border-radius: 50px; border: 1px solid #fff; letter-spacing: 0.5px; transform: translate(30px,255px);}
+
+.special .inner ul li .left a.top {width: 200px; padding: 15px; margin-bottom: 15px;}
+.special .inner ul li:nth-child(1) .left a.top {background: #fff; color: rgb(75, 75, 75);}
+.special .inner ul li:nth-child(2) .left a.top {width: 150px; padding: 15px; margin-bottom: 15px;}
+.special .inner ul li:nth-child(4) .left a.top {width: 170px; padding: 15px; margin-bottom: 15px;}
+
+.special .inner ul li .left a.bottom {width: 130px; padding: 15px 0;}
+.special .inner ul li:nth-child(2) .left a.bottom {width: 180px; padding: 15px 0;}
+.special .inner ul li:nth-child(3) .left a.bottom {width: 200px; padding: 15px 0;}
+.special .inner ul li:nth-child(4) .left a.bottom {width: 200px; padding: 15px 0;}
+
+
+
+.special .inner ul li .right {width: 50%; height: 100%; float: right; background: url(../img/speciality_item_bg_1_1.png) center/cover no-repeat;}
+.special .inner ul li:nth-child(2) .right {background: url(../img/speciality_item_bg_3_1.png) center/cover no-repeat;}
+.special .inner ul li:nth-child(3) .right {background: url(../img/speciality_item_bg_5_1.png) center/cover no-repeat;}
+.special .inner ul li:nth-child(4) .right {background: url(../img/speciality_item_bg_7_1.png) center/cover no-repeat;}
+.special .inner ul li .right p {font-size: 15px; line-height: 1.8; width: 80%; margin: 0 auto; transform: translateY(340px);}
+.special .inner ul li:nth-child(2) .right p {opacity: 0;}
+.special .inner ul li:nth-child(3) .right p {opacity: 0;}
+.special .inner ul li:nth-child(4) .right p {opacity: 0;}
+
+
+
+/* hover */
+.special .inner ul li .left a:hover, .special .inner ul li .left a:focus {background: #fff; color: rgb(75, 75, 75); transition: all 0.3s;}
+
+/* since */
+.since {width: 100%; background: rgb(102, 88, 69); padding: 100px 0;}
+.since .txtBox {width: 100%; margin: 0 auto; text-align: center; color: #fff; padding-top: 50px;}
+.since .txtBox h2 {font-size: 50px; margin-bottom: 40px;}
+.since .txtBox p {line-height: 1.8; letter-spacing: 0.5px; margin-bottom: 80px;}
+.since .center2 {width: 100%; margin-left: 150px;}
+.since .center2 li {width: 100%;}
+.since .center2 li img {width: 110%;}
+.since .center2 li h3 {color: #fff; font-weight: lighter; font-size: 20px; margin: 20px 0;}
+.since .center2 li p {color: #fff; font-size: 14px; line-height: 1.6;}
+
+.since .slick-dots {display: inline-block;  transform:rotate(-90deg); margin-left: 42%;} /*마진패딩 초기화 */
+.since .slick-dots li {display: flex; margin-bottom: 10px;} /* 가로배치, 점들 사이의 간격 */
+.since .slick-dots li button { background: #fff; width: 17px; height: 17px;  border-radius: 50%; border: none;  text-indent: -9999999999px;} /* 원 모양 */
+.since .slick-dots li:hover button { background: rgb(128, 128, 128);} /*마우스를 올렸을 때 */
+.since .slick-dots li.slick-active button { background: rgb(128, 128, 128); } /*현재슬라이드 위치 표시*/
+
+/* people */
+.people {width: 100%;}
+.people .txtBox {width: 100%; text-align: center; padding-top: 200px; background: rgb(247, 247, 247); color: rgb(95, 95, 95);  letter-spacing: 0.5;}
+.people .txtBox h2 {font-size: 40px; font-family: 'Gowun Batang', serif; font-weight: 600; margin-bottom: 40px;}
+.people .txtBox p {font-size: 15px; line-height: 1.6;}
+.people .center3 {width: 100%; background: rgb(247, 247, 247); padding: 90px 0; }
+.people .center3 li {width: 100%; overflow: hidden;}
+.people .center3 li:hover img {transform: scale(1.1); transition: all 0.3s;}
+.people .center3 li img {width: 100%; transition: all 0.3s;}
+.people .center3 li p {color: rgb(95, 95, 95); text-align: center; margin-top: 30px;}
+
+/* wallpaper */
+.wallpaper {width: 100%; background: #fff; padding: 200px 0;}
+.wallpaper .txtBox {width: 100%; text-align: center; color: rgb(78, 78, 78);}
+.wallpaper .txtBox h2 {font-size: 40px; font-family: 'Gowun Batang', serif; margin-bottom: 30px;}
+.wallpaper .txtBox p {line-height: 1.8; margin-bottom: 40px; margin-bottom: 100px;}
+.wallpaper ul {width: 70%; margin: 0 auto; display: flex; overflow: hidden; justify-content: space-between; position: relative; font-family: 'Gowun Batang', serif;}
+.wallpaper ul li {float: left; width: 32%;}
+.wallpaper ul li img {width: 100%;}
+.wallpaper ul.a li:nth-child(1) img, .wallpaper ul.a li:nth-child(3) img {margin-bottom: 28px;}
+.wallpaper ul.b li:nth-child(1) img {margin-bottom: 28px;}
+.wallpaper ul.c li:nth-child(3) img {margin-bottom: 28px;}
+.wallpaper ul p {position: absolute; color: #fff; font-size: 18px;}
+.wallpaper ul p span {display: block; margin-top: 20px; font-size: 14px;}
+.wallpaper ul.a p {top: 500px; left: 485px;}
+.wallpaper ul.b p {top: 500px; left: 485px;}
+.wallpaper ul.b li:nth-child(3) p {top: 50px; left: 945px;}
+.wallpaper ul.c li:nth-child(1) p {top: 520px; left: 50px;}
+.wallpaper ul.c li:nth-child(2) p {top: 50px; left: 500px;}
+
+/* more */
+.more {width: 100%; background: #fff; font-family: 'Gowun Batang', serif; color: rgb(82, 99, 90); padding: 100px 0 200px;}
+.more h2 {font-size: 32px; text-align: center; margin-bottom: 50px;}
+.more ul {width: 50%; margin: 0 auto; font-size: 20px; font-weight: bold; display: flex; justify-content: space-between;}
+.more ul li {width: 28%; border: 1px solid rgb(139, 146, 142); padding: 15px 0; padding-left: 30px; box-sizing: border-box; position: relative; font-size: 17px;}
+.more ul li a {width: 100%; height: 100%;}
+.more ul li::after {content: '\f178'; font-family: fontAwesome; position: absolute; right: 30px;font-weight: 100; line-height: 25px;}
+/* hover */
+.more ul li:hover, .more ul li:focus {background: rgb(11, 53, 32); color: #fff; transition: all 0.2s;}
+
+/* footer */
+footer {width: 100%; background: #fff;}
+footer .top {width: 100%; height: 60px; background: rgb(104, 101, 101);}
+footer .top ul {width: 20%; overflow: hidden; float: right; padding-top: 11px; margin-right: 130px;}
+footer .top ul li {width: 20%; float: left;}
+footer .top ul li:nth-child(1) {text-align: center; padding: 11px; margin-right: 35px; color: #fff; font-weight: bold; background: rgb(61, 60, 60); font-size: 14px;}
+footer .top ul li img {width: 55%;}
+
+footer .middle {width: 100%; background: rgb(241, 241, 241); color: rgb(77, 77, 77);}
+footer .middle .inner {width: 80%; overflow: hidden; margin: 0 auto; padding: 50px;}
+footer .middle .inner .tel {float: left; margin-right: 80px; font-size: 13px;}
+footer .middle .inner .tel .num {font-weight: 500; font-size: 32px; padding: 10px 0;}
+footer .middle .inner span {display: block;}
+footer .middle .inner .email {float: left; font-size: 13px;}
+footer .middle .inner .email .help {font-size: 18px; font-weight: bold; border-bottom: 1px solid rgb(77, 77, 77); width: 153px; margin: 10px 0;}
+footer .middle .inner .email .date {margin-top: 5px;}
+footer .middle .inner .icon {float: right; text-align: center; margin-right: 350px; font-size: 15px;}
+footer .middle .inner .icon ul {width: 200%;overflow: hidden; display: flex; justify-content: space-between; border-left: 1px solid rgb(165, 165, 165); padding-left: 10px;}
+footer .middle .inner .icon ul li {width: 15%;}
+footer .middle .inner .icon ul li img {margin-bottom: 10px;}
+
+footer .bottom {width: 100%; height: 100%; background: #fff; position: relative;}
+footer .bottom .inner {width: 80%; margin: 0 auto; padding: 50px 0; font-size: 12px; color: rgb(136, 136, 136);}
+footer .bottom .inner .logo {float: left; padding: 0 50px;}
+footer .bottom .inner .txtBox {float: left; margin-right: 150px;}
+footer .bottom .inner .txtBox a {display: inline-block; background: rgb(245, 245, 245); padding: 5px 10px; font-size: 11px; border: 1px solid #ddd; margin-left: 10px;}
+footer .bottom .inner .txtBox span {color: black; display: block; margin-bottom: 10px; letter-spacing: 1px;}
+footer .bottom .inner .txtBox p {line-height: 1.6;}
+footer .bottom .inner .pay {border: 1px solid #ddd; display: inline-block; padding: 30px;}
+footer .bottom .inner .pay p {font-weight: bold; margin-bottom: 15px;}
+footer .bottom .inner .pay li {float: left; margin-left: 15px;}
+footer .bottom .goTop {position: fixed; bottom: 30px; right: 50px;}
+
+/* responsiveWeb */
+/* 1200px~1025px */
+@media screen and (max-width:1200px) {
+    br.mo {display: none;}
+    header {width: 100%; height: 50px;}
+    header .innerHeader {line-height: 50px; position: relative;}
+    header .innerHeader .logo {margin-left: 30px;}
+    header .innerHeader .logo img {scale: 0.7;}
+    header .innerHeader .gnb {display: none;}
+    header .innerHeader .tnb {display: none;}
+    header .innerHeader .logo::after {content: '\f0c9'; font-family: fontAwesome; display: block; position: absolute; top: 0; right: 20px; cursor: pointer; color: rgb(148, 148, 148);}
+    
+    .teaTop {padding-bottom: 200px;}
+    .teaTop .inner {width: 80%; padding-top: 150px;}
+    
+    .teaBottom {position: relative;}
+    .teaBottom .inner .main > li {padding-left: 60px;}
+    .teaBottom .inner .main li .txt {width: 80%;}
+    .teaBottom .inner .main li .icon {scale: 0.4; width: 60%; position: absolute; top: 80px; left: 580px; }
+    .teaBottom .inner .main li .adress {bottom: 10%; left: 30%;}
+
+    .special .inner {width: 90%;}
+    .special .inner ul li {width: 100%;}
+
+    .since .slick-dots {display: inline-block;  transform:rotate(-90deg); margin-left: 37%;}
+    .people .center3 li {margin: 10px;}
+
+    .wallpaper ul {width: 95%;}
+    .wallpaper ul p {display: none;}
+    .wallpaper .txtBox h2 {font-size: 30px;}
+    .wallpaper .txtBox p {padding: 0 70px;}
+    .more ul {width: 80%;}
+
+    footer .top ul {margin-right: 10px;}
+    footer .top ul li:nth-child(1) {margin-right: 13px; font-size: 13px;}
+    footer .top ul li img {width: 80%;}
+
+    footer .middle {width: 100%;}
+    footer .middle .inner {width: 100%; margin: 0;}
+    footer .middle .inner .tel {float: left; margin-right: 30px; font-size: 12px;}
+    footer .middle .inner .tel .num {font-weight: 500; font-size: 28px; padding: 10px 0;}
+    footer .middle .inner .email {float: left; font-size: 12px;}
+    footer .middle .inner .icon {float: right; text-align: center; margin-right: 280px; font-size: 15px;}
+    footer .middle .inner .icon ul {width: 155%; padding-left: 20px;}
+
+    footer .bottom .inner {width: 100%; height: 120px;}
+    footer .bottom .inner .pay {display: none;}
+}
+    
+/* 768px~651px */
+@media screen and (max-width:651px) {
+    
+    .teaTop {padding-top: 0px; padding-bottom: 100px;}
+    .teaTop .inner {padding-top: 0px;}
+    .teaTop .inner .txtBox {width: 100%; margin-bottom: 60px;}
+    .teaTop .inner .txtBox h3 {font-size: 25px; margin-bottom: 20px;}
+    .teaTop .inner .txtBox p {font-size: 15px;}
+    .teaTop .inner .imgBox {width: 100%;}
+    br.mo {display: none;}
+
+    .teaBottom .inner .main > li {padding-left: 35px; height: 700px;}
+    .teaBottom .inner .main li h2 {font-size: 25px; font-family: 'Gowun Batang', serif; margin-bottom: 30px;}
+    .teaBottom .inner .main li .txt {font-size: 14px; line-height: 1.6; margin-bottom: 20px;}
+    .teaBottom .inner .main li a {font-size: 13px; padding-bottom: 5px;}
+    .teaBottom .inner .main li .icon {width: 150%; position: absolute; top: 20px; left: -245px; scale: 0.3;}
+    .teaBottom .inner .main li .adress {position: absolute; bottom: 70px; left: 85px; font-size: 14px;}
+
+    .special .inner ul {width: 200%;}
+    .special .inner ul li {width: 100%;}
+    .special .inner ul li .left {width: 50%;}
+    .special .inner ul li .right {display: none;}
+
+    .since .txtBox {padding-top: 20px; width: 80%;}
+    .since .txtBox h2 {font-size: 30px; margin-bottom: 40px;}
+    .since .txtBox p {line-height: 1.8; letter-spacing: 0.5px; margin-bottom: 80px; font-size: 14px;}
+    .since .center2 {width: 100%; margin-left: 0px;}
+    .since .slick-dots {margin-left: 47%;}
+
+    .people .txtBox h2 {font-size: 30px;}
+    .people .txtBox p {font-size: 14px; line-height: 1.6;}
+    .people .center3 li p {font-size: 14px;}
+
+    .wallpaper .txtBox h2 {font-size: 30px; margin-bottom: 30px;}
+    .wallpaper .txtBox p {line-height: 1.8; margin-bottom: 40px; margin-bottom: 100px; font-size: 14px; padding: 0 30px;}
+    .wallpaper ul {width: 90%; margin: 0 auto; flex-wrap: wrap;}
+    .wallpaper ul li {display: block; width: 100%;}
+    .wallpaper ul li img {margin-bottom: 20px;}
+
+    .more { padding: 0px 0 50px;}
+    .more h2 {font-size: 20px; text-align: center; margin-bottom: 50px;}
+    .more ul {display: block;}
+    .more ul li {width: 50%; padding-left: 30px; margin: 15px auto; font-size: 16px;}
+
+    footer {height: 330px;}
+    footer .top {display: none;}
+    footer .middle {display: none;}
+
+    footer .bottom .inner .logo {display: none;}
+    footer .bottom .inner .txtBox {margin: 0 auto; padding: 25px;}
+    footer .bottom .inner .txtBox span {text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 30px;}
+    footer .bottom .inner .txtBox p {line-height: 1.5;}
+    footer .bottom .inner .txtBox a {display: none;}
+
+}
+
+    /* 650px~ */
+    @media screen and (max-width:650px) {
+        .visual {background: url(../img/video_thumb_mo_color2.png) center/cover;}
+        .visual video {display: none;}
+        .visual .titleBox h2 {font-size: 30px; line-height: 1.6;}
+        .visual .titleBox p {font-size: 14px;}
+        
+        .circle {height: 800px;}
+        .circle .center .tit {font-size: 20px;}
+        .circle .center span {font-size: 14px;}
+        .circle .center .txt {font-size: 14px;}
+
+        .teaTop .inner .txtBox h3 {font-size: 23px;}
+        .teaTop .inner .txtBox p {font-size: 14px;}
+        .teaTop .inner .txtBox a {font-size: 14px;}
+
+        .teaBottom .inner .main > li {height: 600px;}
+        .teaBottom .inner .main > li:nth-child(2),.teaBottom .inner .main > li:nth-child(3){background-position: 50%;}
+        .teaBottom .inner .main li h2 {font-size: 23px;}
+        .teaBottom .inner .main li .txt {font-size: 13px; width: 80%;}
+        .teaBottom .inner .main li .icon {width: 200%;}
+        .teaBottom .inner .main li .adress {left: 30px; font-size: 13px;}
+
+        .special .inner .txtBox h3 {font-size: 23px;}
+        .special .inner .txtBox p {font-size: 14px;}
+        .special .inner ul li .left h2 {font-size: 25px;}
+        .special .inner ul li .left a {font-size: 14px;}
+
+        .since .txtBox p {font-size: 13px;}
+        .since .center2 li p {font-size: 12px;}
+        
+        .people .txtBox h2 {font-size: 25px;}
+        .people .txtBox p {width: 80%; margin: 0 auto; font-size: 13px;}
+        .people .center3 li p {font-size: 11px;}
+
+        .wallpaper .txtBox {font-size: 21px;}
+        .wallpaper .txtBox p {font-size: 13px;}
+        .wallpaper ul li img {margin-bottom: 20px;}
+        
+        .more h2 {font-size: 20px;}
+        .more ul li {text-align: center; padding: 15px;}
+        .more ul li::after {display: none;}
+
+        footer {height: 380px;}
+
+    }
+
